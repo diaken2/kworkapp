@@ -18,7 +18,7 @@ app.use(express.json({extended:true}))
 
 const start=async() =>{
     try{
-mongoose.connect('mongodb+srv://kwork:RY1ATripui6$@cluster0.apzfal7.mongodb.net/?retryWrites=true&w=majority',{})
+mongoose.connect('mongodb+srv://admin:RY1ATripui6$@cluster0.8znhtvr.mongodb.net/?retryWrites=true&w=majority',{})
 app.listen(PORT,()=>{
     console.log("Server has been launched on PORT " + PORT)
 })
