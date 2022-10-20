@@ -29,15 +29,15 @@ app.listen(PORT,()=>{
 }
 start()
 app.post('/createAccount',async(req,res)=>{
-    const {login,pass}=req.body
-    const candidate = await User.findOne({ login })
+     const {login,pass}=req.body
+    const candidate = await Admin.findOne({ login })
   
       if (candidate) {
         return res.status(201).json({ message: 'Такой пользователь уже существует' })
       }
   
       
-      const user = new User({ login, password:pass, project:[] })
+      const user = new Admin({ login, password:pass})
   console.log(user)
       await user.save()
   
